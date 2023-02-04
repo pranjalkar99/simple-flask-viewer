@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            function displayHTML(html) {
+              document.getElementById("htmlContainer").innerHTML = html;
+            }
+          </script>
+    </head>
+<body>
+    <!-- make it a nav bar @Rajdeep-->
+    <h2>You are viewing Part-{{current_page}} of the html </h2>
+    <h3><b> Note: Inspect elements, update the html, and then right click and download. </b></h3>
+    <h5>P.S : Common elements to be added: <em>font-weight: bold;</em> and text props like:<em> text-align: left;</em></h5>
+    
+    <!-- This is the body container-->
+    <div id="htmlContainer">
+        {{ pages[current_page]|safe }}
+        
+      </div>
+    <!--Button end-->
+    <form method="post">
+        <button type="submit" class="btn">Next</button>
+    </form>
+    <!-- @Rajdeep Add the update status button here...-->
+    
+<div>
+    <h3 align="center">Update your working status by clicking here:-><button type="submit" class="btn btn-warning" onclick="update_status()">Update Status</button></h3>
+</div>
+</body>
+</html>
